@@ -7,7 +7,7 @@ public class Fruit {
     private String color;
     private double price;
 
-    public Fruit() {
+    public Fruit(double weight, String taste, String color, double price) {
     }
 
     public Fruit(String name, double weight, String taste, String color, double price) {

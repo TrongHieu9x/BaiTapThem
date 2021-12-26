@@ -1,5 +1,6 @@
 package Fruit;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class main {
@@ -28,7 +29,8 @@ public class main {
                     System.out.println(fruitManager.displayFruitPriceMax());
                     break;
                 case 4:
-
+                    System.out.println(fruitManager.oneMillionCanBuyWhichFruitMax());
+                    break;
                 case 5:
                     Fruit fruit1 = fruitManager.createFruit();
                     fruitManager.addFruit(fruit1);

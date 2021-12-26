@@ -31,6 +31,22 @@ public class FruitManager {
         return maxPriceFruit;
     }
 
+    public ArrayList<Fruit> oneMillionCanBuyWhichFruitMax() {
+        ArrayList<Fruit> fruit = new ArrayList<>();
+        double max = fruits.get(0).getPrice();
+        for (Fruit f : fruits) {
+            if (f.getPrice() > max) {
+                max =  f.getPrice();
+            }
+        }
+        for (Fruit f1 : fruits) {
+            if (f1.getPrice() == max) {
+                fruit.add(f1);
+            }
+        }
+        return fruit;
+    }
+
     public void addFruit(Fruit fruit) {
         fruits.add(fruit);
     }
@@ -51,7 +67,7 @@ public class FruitManager {
         return new Fruit(name, weight, taste, color, price);
     }
 
-    public void deleteByName(String name) {
+    public ArrayList<Fruit> deleteByName(String name) {
         Fruit fruit = null;
         for (Fruit fruit1 : fruits) {
             if (Objects.equals(fruit1.getName(), name)) {
@@ -59,5 +75,6 @@ public class FruitManager {
             }
         }
         fruits.remove(fruit);
+        return fruits;
     }
 }
